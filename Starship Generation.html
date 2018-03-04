@@ -30,12 +30,23 @@ tw-story {
 }
 
 tw-link {
-  color:midnightblue; /* Set the link color to darkblue */
+  color:navy; /* Set the link color */
   transition: color .3s ease-in-out;
 }
 
 tw-link:hover { /* Mouse over a link & it turns color */
-  color: mediumseagreen;
+  text-shadow: 1px 1px mediumseagreen; /* text shadow */
+  color: olive;
+  
+}
+.visited {	
+  color: mediumorchid;
+  
+}
+.visited:hover {
+  text-shadow: 1px 1px mediumseagreen; /* text shadow */	
+  color: olive;
+  
 }
 
 img { /* Images won't get wider than tw-passage container */
@@ -144,7 +155,7 @@ body {
 	(link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Werebeast" tags="" position="131,202" size="100,100">(set: $MutationPrime to &quot;Claws&quot;)
-(set: $Damage to $Damage+2)
+(set: $Damage to $Damage+3)
 (set: $Portrait to &#39;&lt;img src=&quot;https://coffeelux.club/uploads/mutant_claw.png&quot; width=&quot;180px&quot; height=&quot;180px&quot;&gt;&#39;)
 &lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
@@ -158,6 +169,7 @@ body {
 	(link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Bat" tags="" position="130,304" size="100,100">(set: $MutationPrime to &quot;Vampirism&quot;)
+(set: $Vampirecheck to true)
 (set: $Portrait to &#39;&lt;img src=&quot;https://static.wixstatic.com/media/caed2f_09e5745944e447efbbe00dd6903b318e%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz&quot; width=&quot;180px&quot; height=&quot;180px&quot;&gt;&#39;)
 &lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
@@ -171,7 +183,7 @@ body {
 	(link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Crustacean" tags="" position="251,199" size="100,100">(set: $MutationPrime to &quot;Carapace&quot;)
-(set: $AC to $AC+2)
+(set: $AC to $AC+3)
 (set: $Portrait to &#39;&lt;img src=&quot;https://static.wixstatic.com/media/caed2f_0c02b38633d94879acd536a30fe8d0d4%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz&quot; width=&quot;180px&quot; height=&quot;180px&quot;&gt;&#39;)
 &lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
@@ -198,7 +210,7 @@ body {
 	(link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Turtle" tags="" position="375,201" size="100,100">(set: $MutationPrime to &quot;Carapace&quot;)
-(set: $AC to $AC+2)
+(set: $AC to $AC+3)
 (set: $Portrait to &#39;&lt;img src=&quot;https://coffeelux.club/uploads/mutant_turtle.png&quot; width=&quot;180px&quot; height=&quot;180px&quot;&gt;&#39;)
 &lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
@@ -211,7 +223,8 @@ body {
   &lt;footer class=&quot;footer&quot;&gt;You have $MutationPrime! 
 	(link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)
 &lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Bird" tags="" position="380,303" size="100,100">(set: $MutationPrime to &quot;Sonic Cry&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Bird" tags="" position="380,303" size="100,100">(set: $MutationPrime to &quot;Wings&quot;)
+(set: $Evasioncheck to true)
 (set: $Portrait to &#39;&lt;img src=&quot;https://static.wixstatic.com/media/caed2f_d2565751f1694f15b84340bb131f4056%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz&quot; width=&quot;180px&quot; height=&quot;180px&quot;&gt;&#39;)
 &lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
@@ -243,7 +256,10 @@ body {
 (set: $Damage to 0)
 (set: $exp to 0)
 (set: $MutationPrime to &quot;None&quot;)
-(set: $MutationSecond to &quot;None&quot;)</tw-passagedata><tw-passagedata pid="11" name="Jyadon" tags="" position="202,444" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+(set: $MutationSecond to &quot;None&quot;)
+(set: $Vampirecheck to false)
+(set: $Evasioncheck to false)
+(set: $Inv to (datamap: &quot;pet&quot;, false, &quot;box&quot;, false, &quot;figure&quot;, false, &quot;necklace&quot;, false, &quot;wrench&quot;, false))</tw-passagedata><tw-passagedata pid="11" name="Jyadon" tags="" position="202,444" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
     &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
 	
@@ -309,9 +325,10 @@ $Portrait
   &lt;aside class=&quot;aside aside-1&quot;&gt;&lt;img src=&quot;https://coffeelux.club/uploads/fritzhalf.jpg&quot;&gt;&lt;/aside&gt;
   &lt;footer class=&quot;footer&quot;&gt;After years... you are a $Profession!
   
-As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls and train with the Rangers.
-(link-goto: &quot;Keeper&quot;, &quot;Scrolls&quot;)
+As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keepers of the Scrolls, train with the Rangers, and train with the Makers.
+(link-goto: &quot;Keepers&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Rangers&quot;, &quot;Rangers&quot;)
+(link-goto: &quot;Makers&quot;, &quot;Workshop&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;
 (set: $job to true)</tw-passagedata><tw-passagedata pid="15" name="Diplomat" tags="" position="600,200" size="100,100">[(set: $Profession to &quot;Diplomat&quot;)]
@@ -332,9 +349,10 @@ As you grow older, more able, and reach the end of your apprenticeship you make 
   &lt;aside class=&quot;aside aside-1&quot;&gt;GUILD Portrait&lt;/aside&gt;
   &lt;footer class=&quot;footer&quot;&gt;After years... you are a $Profession!
 
-As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls and train with the Rangers.
-(link-goto: &quot;Keeper&quot;, &quot;Scrolls&quot;)
+As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keepers of the Scrolls, train with the Rangers, and train with the Makers.
+(link-goto: &quot;Keepers&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Rangers&quot;, &quot;Rangers&quot;)
+(link-goto: &quot;Makers&quot;, &quot;Workshop&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;
 (set: $job to true)</tw-passagedata><tw-passagedata pid="16" name="Trader" tags="" position="604,306" size="100,100">[(set: $Profession to &quot;Trader&quot;)]
@@ -356,9 +374,10 @@ As you grow older, more able, and reach the end of your apprenticeship you make 
   &lt;aside class=&quot;aside aside-1&quot;&gt;GUILD Portrait&lt;/aside&gt;
   &lt;footer class=&quot;footer&quot;&gt;After years... you are a $Profession!
 
-As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls and train with the Rangers.
-(link-goto: &quot;Keeper&quot;, &quot;Scrolls&quot;)
+As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keepers of the Scrolls, train with the Rangers, and train with the Makers.
+(link-goto: &quot;Keepers&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Rangers&quot;, &quot;Rangers&quot;)
+(link-goto: &quot;Makers&quot;, &quot;Workshop&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;
 (set: $job to true)</tw-passagedata><tw-passagedata pid="17" name="Medicine Man" tags="" position="604,409" size="100,100">[(set: $Profession to &quot;Medicine Man&quot;)]
@@ -380,9 +399,10 @@ As you grow older, more able, and reach the end of your apprenticeship you make 
   &lt;aside class=&quot;aside aside-1&quot;&gt;GUILD Portrait&lt;/aside&gt;
   &lt;footer class=&quot;footer&quot;&gt;After years... you are a $Profession!
 
-As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls and train with the Rangers.
-(link-goto: &quot;Keeper&quot;, &quot;Scrolls&quot;)
+As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keepers of the Scrolls, train with the Rangers, and train with the Makers.
+(link-goto: &quot;Keepers&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Rangers&quot;, &quot;Rangers&quot;)
+(link-goto: &quot;Makers&quot;, &quot;Workshop&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;
 (set: $job to true)</tw-passagedata><tw-passagedata pid="18" name="Fixer" tags="" position="601,510" size="100,100">[(set: $Profession to &quot;Fixer&quot;)]
@@ -404,12 +424,13 @@ As you grow older, more able, and reach the end of your apprenticeship you make 
   &lt;aside class=&quot;aside aside-1&quot;&gt;GUILD Portrait&lt;/aside&gt;
   &lt;footer class=&quot;footer&quot;&gt;After years... you are a $Profession!
 
-As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls and train with the Rangers.
-(link-goto: &quot;Keeper&quot;, &quot;Scrolls&quot;)
+As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keepers of the Scrolls, train with the Rangers, and train with the Makers.
+(link-goto: &quot;Keepers&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Rangers&quot;, &quot;Rangers&quot;)
+(link-goto: &quot;Makers&quot;, &quot;Workshop&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;
-(set: $job to true)</tw-passagedata><tw-passagedata pid="19" name="Scrolls" tags="" position="797,203" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+(set: $job to true)</tw-passagedata><tw-passagedata pid="19" name="Scrolls" tags="" position="798,99" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
     &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
 	
@@ -417,7 +438,6 @@ As you grow older, more able, and reach the end of your apprenticeship you make 
 (print: &quot;BRAINS=&quot;) (print: $Brains)
 (print: &quot;CHARM=&quot;) (print: $Charm)
 (print: &quot;DURABILITY=&quot;) (print: $Durability)
-(set: $HP to $HP + $Durability)
 (print: &quot;HP=&quot;) (print: $HP) 
 (print: &quot;AC=&quot;) (print: $AC)
 exp= $exp &lt;/p&gt;  
@@ -427,8 +447,10 @@ exp= $exp &lt;/p&gt;
 (link-goto: &quot;Read x&quot;, &quot;Scrollx&quot;)
 (link-goto: &quot;Read y&quot;, &quot;Scrolly&quot;)
 (link-goto: &quot;Read z&quot;, &quot;Scrollz&quot;)
+(link-goto: &quot;Gymnarium&quot;, &quot;Rangers&quot;)
+(link-goto: &quot;Workshop&quot;, &quot;Workshop&quot;)
 &lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Rangers" tags="" position="801,400" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Rangers" tags="" position="800,504" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
     &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
 	
@@ -446,10 +468,12 @@ exp= $exp &lt;/p&gt;
 
 Where do you want to go?
 
+(link-goto: &quot;Librarium&quot;, &quot;Scrolls&quot;)
+(link-goto: &quot;Workshop&quot;, &quot;Workshop&quot;)
 [[Training Pit]]
 
 &lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Scrollx" tags="" position="900,22" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Scrollx" tags="" position="904,0" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
     &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
 	
@@ -457,7 +481,6 @@ Where do you want to go?
 (print: &quot;BRAINS=&quot;) (print: $Brains)
 (print: &quot;CHARM=&quot;) (print: $Charm)
 (print: &quot;DURABILITY=&quot;) (print: $Durability)
-(set: $HP to $HP + $Durability)
 (print: &quot;HP=&quot;) (print: $HP) 
 (print: &quot;AC=&quot;) (print: $AC)&lt;/p&gt;  
   &lt;/article&gt;
@@ -466,7 +489,7 @@ Where do you want to go?
   &quot;Crew casulaties are such we need to be thinking bare minimum survival scenarios. At the very least we need a science officer to find a habitable planet, an engineer to keep the ship running, and a pilot to navigate to the new homeworld&quot;
 (link-goto: &quot;Back to Librarium&quot;, &quot;Scrolls&quot;)
 &lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Scrolly" tags="" position="902,147.5" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Scrolly" tags="" position="903,106" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
     &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
 	
@@ -474,7 +497,6 @@ Where do you want to go?
 (print: &quot;BRAINS=&quot;) (print: $Brains)
 (print: &quot;CHARM=&quot;) (print: $Charm)
 (print: &quot;DURABILITY=&quot;) (print: $Durability)
-(set: $HP to $HP + $Durability)
 (print: &quot;HP=&quot;) (print: $HP) 
 (print: &quot;AC=&quot;) (print: $AC)&lt;/p&gt;  
   &lt;/article&gt;
@@ -483,7 +505,7 @@ Where do you want to go?
   &quot;The monitor readouts from the birth creche showed anomolies in the genetic matrix so the remaining scientists woke three of their eldest from cryosleep. Each displayed a beneficial adaptive mutation&quot;
 (link-goto: &quot;Back to Librarium&quot;, &quot;Scrolls&quot;)
 &lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Scrollz" tags="" position="902,278.5" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Scrollz" tags="" position="902,207.5" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
     &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
 	
@@ -491,7 +513,6 @@ Where do you want to go?
 (print: &quot;BRAINS=&quot;) (print: $Brains)
 (print: &quot;CHARM=&quot;) (print: $Charm)
 (print: &quot;DURABILITY=&quot;) (print: $Durability)
-(set: $HP to $HP + $Durability)
 (print: &quot;HP=&quot;) (print: $HP) 
 (print: &quot;AC=&quot;) (print: $AC)&lt;/p&gt;  
   &lt;/article&gt;
@@ -500,7 +521,7 @@ Where do you want to go?
   &quot;Parents are building mentor toys to prepare the next generation of engineers, scientists, and pilots -- our children sleeping safe in their birth creche.  Certainly the fear is that the radiation sickness will take this generation before we even meet our progeny to train them.&quot;
 (link-goto: &quot;Back to Librarium&quot;, &quot;Scrolls&quot;)
 &lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Training Pit" tags="" position="900,602" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Training Pit" tags="" position="1001,599" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
     &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
 	
@@ -514,7 +535,7 @@ Where do you want to go?
   &lt;aside class=&quot;aside aside-1&quot;&gt;Beast Portrait
 &lt;/aside&gt;
 &lt;footer class=&quot;footer&quot;&gt;(if: (random:1,1) is 1)[(set: $enemyName to (either:&quot;spiderbat&quot;,&quot;deathrabbit&quot;))
-A $enemyName crawls out of the shadows!(set: $enemyHealth to 10)
+A $enemyName crawls out of the shadows!(set: $enemyHealth to 8)
 (display: &quot;Combat&quot;)
 ]
 (else:)[
@@ -526,11 +547,15 @@ A $enemyName crawls out of the shadows!(set: $enemyHealth to 10)
 
 
 </tw-passagedata><tw-passagedata pid="25" name="Combat" tags="" position="1103,601" size="100,100">(set: $enemyHit to (random:1,5))
-(color:red)[The $enemyName ATTACKS YOU! //-$enemyHit//]
+(set: $Miss to (random:1,4))
+(if: $Evasioncheck AND $Miss &gt;2) [You flew and dodged the ATTACK!]
+(else:)[(color:red)[The $enemyName ATTACKS YOU! //-$enemyHit//]
 (set: $enemyHit to $enemyHit - $AC)You absorb $AC from your armor. 
-(set: $HP to $HP - $enemyHit)You have [$HP HP].
+(set: $HP to $HP - $enemyHit)You have [$HP HP].]
 (if: $HP &gt; 0)[(set: $hit to 5 + $Damage)
 	(set: $enemyHealth to $enemyHealth - $hit)
+	(if: $Vampirecheck) [(set: $HP to $HP + 1)
+	(color:green) [Your hit steals life! [$HP HP].]]
 	(color:green) [You PUNCH the $enemyName![-$hit]]
 	(if: $enemyHealth &gt; 0)[It has $enemyHealth HP left.
 	
@@ -546,7 +571,32 @@ A $enemyName crawls out of the shadows!(set: $enemyHealth to 10)
 (else:)[
 	(color:red)[☠ You died! ☠
 	☠ GAME OVER ☠]
-]</tw-passagedata></tw-storydata>
+]</tw-passagedata><tw-passagedata pid="26" name="Workshop" tags="" position="801,351" size="100,100">
+&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
+	
+(print: &quot;ATHLETICS=&quot;) (print: $Athletics)
+(print: &quot;BRAINS=&quot;) (print: $Brains)
+(print: &quot;CHARM=&quot;) (print: $Charm)
+(print: &quot;DURABILITY=&quot;) (print: $Durability)
+(print: &quot;HP=&quot;) (print: $HP) 
+(print: &quot;AC=&quot;) (print: $AC)
+exp= $exp &lt;/p&gt;   
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;Box Portrait
+&lt;/aside&gt;
+&lt;footer class=&quot;footer&quot;&gt;
+You see:
+(if: not $Inv&#39;s &quot;box&quot;)[[Quantum Box]&lt;getbox|]
+(click: ?getbox)[You pick up the Quantum Box.....!
+(set: $Inv&#39;s &quot;box&quot; to true)]
+
+(link-goto: &quot;Librarium&quot;, &quot;Scrolls&quot;)
+(link-goto: &quot;Gymnarium&quot;, &quot;Rangers&quot;)
+
+&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
