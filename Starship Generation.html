@@ -30,12 +30,12 @@ tw-story {
 }
 
 tw-link {
-  color:blue; /* Set the link color to darkblue */
+  color:midnightblue; /* Set the link color to darkblue */
   transition: color .3s ease-in-out;
 }
 
 tw-link:hover { /* Mouse over a link & it turns color */
-  color: green;
+  color: mediumseagreen;
 }
 
 img { /* Images won't get wider than tw-passage container */
@@ -144,6 +144,7 @@ body {
 	(link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Werebeast" tags="" position="131,202" size="100,100">(set: $MutationPrime to &quot;Claws&quot;)
+(set: $Damage to $Damage+2)
 (set: $Portrait to &#39;&lt;img src=&quot;https://coffeelux.club/uploads/mutant_claw.png&quot; width=&quot;180px&quot; height=&quot;180px&quot;&gt;&#39;)
 &lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
@@ -239,6 +240,8 @@ body {
 (set: $Durability to 3)
 (Set: $HP to 4)
 (Set: $AC to 0)
+(set: $Damage to 0)
+(set: $exp to 0)
 (set: $MutationPrime to &quot;None&quot;)
 (set: $MutationSecond to &quot;None&quot;)</tw-passagedata><tw-passagedata pid="11" name="Jyadon" tags="" position="202,444" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
@@ -416,7 +419,8 @@ As you grow older, more able, and reach the end of your apprenticeship you make 
 (print: &quot;DURABILITY=&quot;) (print: $Durability)
 (set: $HP to $HP + $Durability)
 (print: &quot;HP=&quot;) (print: $HP) 
-(print: &quot;AC=&quot;) (print: $AC)&lt;/p&gt;  
+(print: &quot;AC=&quot;) (print: $AC)
+exp= $exp &lt;/p&gt;  
   &lt;/article&gt;
   &lt;aside class=&quot;aside aside-1&quot;&gt;KEEPER Portrait&lt;/aside&gt;
   &lt;footer class=&quot;footer&quot;&gt;I&#39;m the Keeper!
@@ -432,18 +436,16 @@ As you grow older, more able, and reach the end of your apprenticeship you make 
 (print: &quot;BRAINS=&quot;) (print: $Brains)
 (print: &quot;CHARM=&quot;) (print: $Charm)
 (print: &quot;DURABILITY=&quot;) (print: $Durability)
-(set: $HP to $HP + $Durability)
 (print: &quot;HP=&quot;) (print: $HP) 
-(print: &quot;AC=&quot;) (print: $AC)&lt;/p&gt;  
+(print: &quot;AC=&quot;) (print: $AC)
+exp= $exp &lt;/p&gt;   
   &lt;/article&gt;
-  &lt;aside class=&quot;aside aside-1&quot;&gt;RANGER Portrait&lt;/aside&gt;
-  &lt;footer class=&quot;footer&quot;&gt;I&#39;m a Ranger!
-(set: $sword to 0)
-(set: $coins to 11)
-(set: $points to 0)
-(set: $HP to 10)
+  &lt;aside class=&quot;aside aside-1&quot;&gt;RANGER Portrait
+&lt;/aside&gt;
+&lt;footer class=&quot;footer&quot;&gt;I&#39;m a Ranger!
+
 Where do you want to go?
-[[Armory]]
+
 [[Training Pit]]
 
 &lt;/footer&gt;
@@ -498,71 +500,53 @@ Where do you want to go?
   &quot;Parents are building mentor toys to prepare the next generation of engineers, scientists, and pilots -- our children sleeping safe in their birth creche.  Certainly the fear is that the radiation sickness will take this generation before we even meet our progeny to train them.&quot;
 (link-goto: &quot;Back to Librarium&quot;, &quot;Scrolls&quot;)
 &lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Armory" tags="" position="715,549" size="100,100">
-(if: $coins &gt;= 10)[
-	[[Buy A Sword For 10 Coins]] ]
-(else:)[
-	Swords cost 10, but you only have $coins. ]
-Return to [[Rangers]]</tw-passagedata><tw-passagedata pid="25" name="Training Pit" tags="" position="900,551" size="100,100">(if: (random:1,3) is 1)[
-	(set:$location to &quot;Training Pit&quot;)
-	(display: &quot;Fight Enemy&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Training Pit" tags="" position="900,602" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
+	
+(print: &quot;ATHLETICS=&quot;) (print: $Athletics)
+(print: &quot;BRAINS=&quot;) (print: $Brains)
+(print: &quot;CHARM=&quot;) (print: $Charm)
+(print: &quot;DURABILITY=&quot;) (print: $Durability)
+(print: &quot;HP=&quot;) (print: $HP) 
+(print: &quot;AC=&quot;) (print: $AC)&lt;/p&gt;  
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;Beast Portrait
+&lt;/aside&gt;
+&lt;footer class=&quot;footer&quot;&gt;(if: (random:1,1) is 1)[(set: $enemyName to (either:&quot;spiderbat&quot;,&quot;deathrabbit&quot;))
+A $enemyName crawls out of the shadows!(set: $enemyHealth to 10)
+(display: &quot;Combat&quot;)
 ]
 (else:)[
 	The pit looks empty... //for now.// Check later.
 	Go back to [[Rangers]]
-]</tw-passagedata><tw-passagedata pid="26" name="Buy A Sword For 10 Coins" tags="" position="669,697" size="100,100">(set: $sword to $sword + 1)(set: $coins to $coins - 10)
-(color:green)[+1 sword!]
-You now have a Level $sword sword!
-(color:red)[-10 coins.]
-You now have $coins coins.
+]
+&lt;/footer&gt;
+&lt;/div&gt;
 
-(display:&quot;Armory&quot;)</tw-passagedata><tw-passagedata pid="27" name="Fight Enemy" tags="" position="901,698" size="100,100">(set: $enemyName to (either:&quot;spiderbat&quot;,&quot;deathrabbit&quot;))
-A $enemyName crawls out of the shadows!
-(set: $enemyHealth to 10)
-(set: $punch to 5)
-(display: &quot;Enemy Hits You&quot;)</tw-passagedata><tw-passagedata pid="28" name="Enemy Hits You" tags="" position="1049,553" size="100,100">(if: $enemyHealth &gt; 0)[
-	(set: $enemyHit to (random:1,2)+(random:1,2))
-	(color:red)[The $enemyName ATTACKS YOU! //-$enemyHit//]
-	(set: $HP to $HP - $enemyHit)
-	(set: $points to $points + $enemyHit)
-	You have (color:yellow)[$HP HP].
-	(if: $HP &gt; 0)[
-		(display: &quot;Use Weapon&quot;)
-	]
-	(else:)[
-		(display: &quot;You Died&quot;)
-	]
-]
-(else:)[
-	You have defeated the $enemyName. //+10 pts!//
-	(set: $points to $points + 10)
-	(set: $randomCoins to (random:25,50))
-	(set: $coins to $coins + $randomCoins)
-	//+$randomCoins coins!// You now have $coins coins.
-	You have (color:yellow)[$HP HP].
-	[[Continue]]
-]</tw-passagedata><tw-passagedata pid="29" name="Continue" tags="" position="1103,698" size="100,100">(goto:$location)</tw-passagedata><tw-passagedata pid="30" name="Use Weapon" tags="" position="1202,549" size="100,100">[[Punch]]
-(if: $sword &gt; 0)[	[[Use Sword]] ]</tw-passagedata><tw-passagedata pid="31" name="Punch" tags="" position="1233,699" size="100,100">(set: $hit to $punch + (random:1,6))
-(if: (random:1,8) is 1)[
-	You tried to PUNCH it but you missed!
-]
-(else:)[
+
+</tw-passagedata><tw-passagedata pid="25" name="Combat" tags="" position="1103,601" size="100,100">(set: $enemyHit to (random:1,5))
+(color:red)[The $enemyName ATTACKS YOU! //-$enemyHit//]
+(set: $enemyHit to $enemyHit - $AC)You absorb $AC from your armor. 
+(set: $HP to $HP - $enemyHit)You have [$HP HP].
+(if: $HP &gt; 0)[(set: $hit to 5 + $Damage)
 	(set: $enemyHealth to $enemyHealth - $hit)
-	(set: $points to $points + $hit)
-	You PUNCH the $enemyName! (color:green)[-$hit]
-]
-(display: &quot;Enemy Hits You&quot;)</tw-passagedata><tw-passagedata pid="32" name="Use Sword" tags="" position="1363,699" size="100,100">(set: $hit to 10 + (random:1,6) + (random:1,6))
-(if: (random:1,10) is 1)[
-	You tried to SLASH it with your sword but you missed!
+	(color:green) [You PUNCH the $enemyName![-$hit]]
+	(if: $enemyHealth &gt; 0)[It has $enemyHealth HP left.
+	
+	(link-goto: &quot;Attack&quot;, &quot;Combat&quot;)
+	(link-goto: &quot;Retreat&quot;, &quot;Rangers&quot;)	
+	]
+	(else:)[You have defeated the $enemyName. //+10 exp!//
+	(set: $exp to $exp + 10)You now have $exp exp.
+
+	(link-goto: &quot;Speak of victory to Ranger&quot;, &quot;Rangers&quot;)
+	]
 ]
 (else:)[
-	(set: $enemyHealth to $enemyHealth - $hit)
-	(set: $points to $points + $hit)
-	You SLASH the $enemyName with your sword! (color:green)[-$hit]
-]
-(display: &quot;Enemy Hits You&quot;)</tw-passagedata><tw-passagedata pid="33" name="You Died" tags="" position="1366,559" size="100,100">(color:red)[☠ You died! ☠
-☠ GAME OVER ☠
-(set: $points to $points + $coins)☠ //Final Score: $points// ☠]</tw-passagedata></tw-storydata>
+	(color:red)[☠ You died! ☠
+	☠ GAME OVER ☠]
+]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
