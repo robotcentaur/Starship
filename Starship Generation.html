@@ -107,7 +107,11 @@ body {
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -131,6 +135,7 @@ body {
 &lt;/aside&gt;
   &lt;footer class=&quot;footer&quot;&gt;Welcome Traveller! You awake in your birth creche already a young adult -- android servitors are forcing you outside, but you gaze at the mirrored surface of the chrome chambers and see a humanoid....&lt;/footer&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Insect" tags="" position="0,191" size="100,100">(set: $MutationPrime to &quot;Antennae&quot;)
+(set: $Secretcheck to true)
 (set: $Portrait to &#39;&lt;img src=&quot;https://static.wixstatic.com/media/caed2f_2cede54434fe4c23b4df6dce4b21282a%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz&quot; width=&quot;180px&quot; height=&quot;180px&quot;&gt;&#39;)
 &lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
@@ -259,7 +264,8 @@ body {
 (set: $MutationSecond to &quot;None&quot;)
 (set: $Vampirecheck to false)
 (set: $Evasioncheck to false)
-(set: $Inv to (datamap: &quot;pet&quot;, false, &quot;QuantumBox&quot;, false, &quot;figure&quot;, false, &quot;necklace&quot;, false, &quot;wrench&quot;, false))
+(set:$Secretcheck to false)
+(set: $Inv to (datamap: &quot;pet&quot;, false, &quot;QuantumBox&quot;, false, &quot;figure&quot;, false, &quot;SpacetimeNecklace&quot;, false, &quot;wrench&quot;, false))
 (set: $box to false)
 (set: $Roll to 0)
 (set: $Attack to 0)
@@ -287,12 +293,10 @@ body {
 (print: &quot;DURABILITY=&quot;) (print: $Durability)&lt;/p&gt;  
   &lt;/article&gt;
   &lt;aside class=&quot;aside aside-1&quot;&gt;JYADON Portrait&lt;/aside&gt;
-  &lt;footer class=&quot;footer&quot;&gt;&quot;Hello child, my name is Jyadon.  Welcome to Terra. It is time to enter the world and contribute to The Wheel.&quot;  
-
-&quot;You will become an apprentice to a guildmaster from our tribe. You can choose your part.&quot;
+  &lt;footer class=&quot;footer&quot;&gt;&quot;Hello child, my name is Jyadon.  Welcome to Terra. It is time to enter the world and contribute to The Wheel. You will become an apprentice to a guildmaster from our tribe. You can choose your part.&quot;
 (link-goto: &quot;Guild&quot;, &quot;Profession&quot;)
 &lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Profession" tags="" position="500,306" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Profession" tags="" position="500,307" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
     &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
 
@@ -306,7 +310,7 @@ $Portrait
 
 (link-goto: &quot;Beast Master&quot;)
 (link-goto: &quot;Diplomat&quot;)
-(link-goto: &quot;Trader&quot;)
+(link-goto: &quot;Junk Dealer&quot;)
 (link-goto: &quot;Medicine Man&quot;)
 (link-goto: &quot;Fixer&quot;)&lt;/aside&gt;
   &lt;footer class=&quot;footer&quot;&gt;You are then told that the next several years of study will prepare you for your future with the tribe, and your place in The Wheel.
@@ -331,6 +335,7 @@ $Portrait
   &lt;footer class=&quot;footer&quot;&gt;After years... you are a $Profession!
   
 As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls, train with the Rangers, and tinker in the Workshop.
+
 (link-goto: &quot;Keepers&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Rangers&quot;, &quot;Rangers&quot;)
 (link-goto: &quot;Workshop&quot;, &quot;Workshop&quot;)
@@ -355,12 +360,13 @@ As you grow older, more able, and reach the end of your apprenticeship you make 
   &lt;footer class=&quot;footer&quot;&gt;After years... you are a $Profession!
 
 As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls, train with the Rangers, and tinker in the Workshop.
+
 (link-goto: &quot;Keepers&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Rangers&quot;, &quot;Rangers&quot;)
 (link-goto: &quot;Workshop&quot;, &quot;Workshop&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;
-(set: $job to true)</tw-passagedata><tw-passagedata pid="16" name="Trader" tags="" position="604,306" size="100,100">[(set: $Profession to &quot;Trader&quot;)]
+(set: $job to true)</tw-passagedata><tw-passagedata pid="16" name="Junk Dealer" tags="" position="604,306" size="100,100">[(set: $Profession to &quot;Trader&quot;)]
 (set: $Brains to $Brains +1)
 (set: $Charm to $Charm +2)
 (set: $Durability to $Durability +1)
@@ -380,12 +386,13 @@ As you grow older, more able, and reach the end of your apprenticeship you make 
   &lt;footer class=&quot;footer&quot;&gt;After years... you are a $Profession!
 
 As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls, train with the Rangers, and tinker in the Workshop.
+
 (link-goto: &quot;Keepers&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Rangers&quot;, &quot;Rangers&quot;)
 (link-goto: &quot;Workshop&quot;, &quot;Workshop&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;
-(set: $job to true)</tw-passagedata><tw-passagedata pid="17" name="Medicine Man" tags="" position="604,409" size="100,100">[(set: $Profession to &quot;Medicine Man&quot;)]
+(set: $job to true)</tw-passagedata><tw-passagedata pid="17" name="Medicine Man" tags="" position="602,411" size="100,100">[(set: $Profession to &quot;Medicine Man&quot;)]
 (set: $Brains to $Brains +1)
 (set: $Charm to $Charm +1)
 (set: $Durability to $Durability +2)
@@ -405,12 +412,13 @@ As you grow older, more able, and reach the end of your apprenticeship you make 
   &lt;footer class=&quot;footer&quot;&gt;After years... you are a $Profession!
 
 As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls, train with the Rangers, and tinker in the Workshop.
+
 (link-goto: &quot;Keepers&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Rangers&quot;, &quot;Rangers&quot;)
 (link-goto: &quot;Workshop&quot;, &quot;Workshop&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;
-(set: $job to true)</tw-passagedata><tw-passagedata pid="18" name="Fixer" tags="" position="601,510" size="100,100">[(set: $Profession to &quot;Fixer&quot;)]
+(set: $job to true)</tw-passagedata><tw-passagedata pid="18" name="Fixer" tags="" position="601,518" size="100,100">[(set: $Profession to &quot;Fixer&quot;)]
 (set: $Athletics to $Athletics +1)
 (set: $Brains to $Brains +2)
 (set: $Durability to $Durability +1)
@@ -430,12 +438,13 @@ As you grow older, more able, and reach the end of your apprenticeship you make 
   &lt;footer class=&quot;footer&quot;&gt;After years... you are a $Profession!
 
 As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls, train with the Rangers, and tinker in the Workshop.
+
 (link-goto: &quot;Keepers&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Rangers&quot;, &quot;Rangers&quot;)
 (link-goto: &quot;Workshop&quot;, &quot;Workshop&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;
-(set: $job to true)</tw-passagedata><tw-passagedata pid="19" name="Scrolls" tags="" position="798,99" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+(set: $job to true)</tw-passagedata><tw-passagedata pid="19" name="Scrolls" tags="" position="799,99" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
     &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
 	
@@ -453,12 +462,15 @@ You are Carring: _have
   &lt;/article&gt;
   &lt;aside class=&quot;aside aside-1&quot;&gt;KEEPER Portrait&lt;/aside&gt;
   &lt;footer class=&quot;footer&quot;&gt;I&#39;m the Keeper!
-  
+(If: $exp &gt; 19)[Keeper: &quot;You look fit enough to venture beyond village if the Wheel leads there.&quot;
+(link-goto: &quot;Village Gate&quot;)]
+
 (link-goto: &quot;Read x&quot;, &quot;Scrollx&quot;)
 (link-goto: &quot;Read y&quot;, &quot;Scrolly&quot;)
 (link-goto: &quot;Read z&quot;, &quot;Scrollz&quot;)
 (link-goto: &quot;Workshop&quot;, &quot;Workshop&quot;)
 (link-goto: &quot;Gymnarium&quot;, &quot;Rangers&quot;)
+
 &lt;/footer&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Rangers" tags="" position="800,504" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
@@ -561,7 +573,7 @@ You are Carring: _have
   &lt;/article&gt;
   &lt;aside class=&quot;aside aside-1&quot;&gt;Beast Portrait
 &lt;/aside&gt;
-&lt;footer class=&quot;footer&quot;&gt;(if: (random:1,1) is 1)[(set: $enemyName to (either:&quot;spiderbat&quot;,&quot;deathrabbit&quot;))
+&lt;footer class=&quot;footer&quot;&gt;(if: (random:1,2) is 1)[(set: $enemyName to (either:&quot;dogbot&quot;,&quot;deathrabbit&quot;))
 A $enemyName crawls out of the shadows!(set: $enemyHealth to 8)
 (display: &quot;Combat&quot;)
 ]
@@ -573,7 +585,7 @@ A $enemyName crawls out of the shadows!(set: $enemyHealth to 8)
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="25" name="Combat" tags="" position="1102,498" size="100,100">(set: $enemyHit to (random:3,5))
+</tw-passagedata><tw-passagedata pid="25" name="Combat" tags="" position="1102,499" size="100,100">(set: $enemyHit to (random:3,5))
 (set: $Dodge to (random:1,4))
 (if: $Evasioncheck AND $Dodge &gt; 2) [You flew and dodged the ATTACK!]
 (else:)[(color:red)[The $enemyName ATTACKS YOU! //-$enemyHit//]
@@ -634,7 +646,7 @@ You see:
 (link-goto: &quot;Workbench&quot;, &quot;Workbench&quot;)
 
 &lt;/footer&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Workbench" tags="" position="1002,353.5" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Workbench" tags="" position="1002,353" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
     &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (print: $MutationPrime)
 	
@@ -652,8 +664,7 @@ You are Carring: _have
   &lt;/article&gt;
   &lt;aside class=&quot;aside aside-1&quot;&gt;WORKBENCH Portrait&lt;/aside&gt;
   &lt;footer class=&quot;footer&quot;&gt;Use your brains to tinker on things.....
-(if: $box is true) [
-(link-goto: &quot;Operate the QuantumBox&quot;)]
+(if: $box is true) [(link-goto: &quot;Operate the QuantumBox&quot;)]
   
 (link-goto: &quot;Librarium&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Workshop&quot;, &quot;Workshop&quot;)
@@ -679,7 +690,7 @@ You are Carring: _have
   &lt;footer class=&quot;footer&quot;&gt;You tinker....
 (set: $ArtCheck to $Brains + 2)(set: $ArtRoll to (random:1,10))
 	(if: $ArtRoll &gt; $Brains) 
-	[You cannot understad the box.]
+	[You cannot understand the box.]
 	(else:)
 	[You figured out the BOX!!!! //+10 exp!//
 	(set: $exp to $exp + 10)You now have $exp exp.]
@@ -687,6 +698,78 @@ You are Carring: _have
 (link-goto: &quot;Librarium&quot;, &quot;Scrolls&quot;)
 (link-goto: &quot;Workshop&quot;, &quot;Workshop&quot;)
 (link-goto: &quot;Gymnarium&quot;, &quot;Rangers&quot;)
+&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Village Gate" tags="" position="1100,99" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
+	
+(print: &quot;ATHLETICS=&quot;) (print: $Athletics)
+(print: &quot;BRAINS=&quot;) (print: $Brains)
+(print: &quot;CHARM=&quot;) (print: $Charm)
+(print: &quot;DURABILITY=&quot;) (print: $Durability)
+(print: &quot;HP=&quot;) (print: $HP) 
+(print: &quot;AC=&quot;) (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv&#39;s (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+&lt;/p&gt;  
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;WHEEL Portrait&lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;The Wheel.....
+
+(link-goto: &quot;The Warrens&quot;, &quot;Deathrabbits&quot;)
+(link-goto: &quot;Storage Warehouse&quot;, &quot;Dogbots&quot;)
+
+&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Dogbots" tags="" position="1300,1.5" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
+	
+(print: &quot;ATHLETICS=&quot;) (print: $Athletics)
+(print: &quot;BRAINS=&quot;) (print: $Brains)
+(print: &quot;CHARM=&quot;) (print: $Charm)
+(print: &quot;DURABILITY=&quot;) (print: $Durability)
+(print: &quot;HP=&quot;) (print: $HP) 
+(print: &quot;AC=&quot;) (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv&#39;s (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+&lt;/p&gt;  
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;Portrait&lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;dogbots
+
+(link-goto: &quot;The Warrens&quot;, &quot;Deathrabbits&quot;)
+
+&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Deathrabbits" tags="" position="1303,201.5" size="100,100">&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;(print: &quot;Primary Mutation=&quot;) (Print: $MutationPrime)
+	
+(print: &quot;ATHLETICS=&quot;) (print: $Athletics)
+(print: &quot;BRAINS=&quot;) (print: $Brains)
+(print: &quot;CHARM=&quot;) (print: $Charm)
+(print: &quot;DURABILITY=&quot;) (print: $Durability)
+(print: &quot;HP=&quot;) (print: $HP) 
+(print: &quot;AC=&quot;) (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv&#39;s (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+&lt;/p&gt;  
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;Portrait&lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;deathrabbits
+(if: $Secretcheck is true) [You see:
+(if: not $Inv&#39;s &quot;SpacetimeNecklace&quot;)[[Spacetime Necklace]&lt;getnecklace|]
+(click: ?getnecklace)[You pick up the Spacetime Necklace.....!
+(set: $Inv&#39;s &quot;SpacetimeNecklace&quot; to true)
+(set: $necklace to true)]]
+
+(link-goto: &quot;Storage Warehouse&quot;, &quot;Dogbots&quot;)
+
 &lt;/footer&gt;
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 
