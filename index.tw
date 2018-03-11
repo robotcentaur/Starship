@@ -1,0 +1,881 @@
+:: StorySettings
+ifid:5cc4020e-9ec3-452e-9e23-8543bd7a0247
+zoom:1
+
+
+:: StoryTitle
+Starship Generation
+
+
+:: Story Stylesheet [stylesheet]
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+tw-story {	
+  /* The following changes the text */
+  color: gold; /* Set text to color */
+  text-shadow: 1px 1px orangered; /* text shadow */
+  font-size: 14px;
+  font-family: "Press Start 2P","Helvetica","Arial",sans-serif;
+}
+
+.main {
+  /* The following changes the text box */
+  border: 5px groove gray; /* Gray border around the box */
+  border-radius: 25px; /* Rounded corners on the box */
+  background: rgba(255,255,255,0.7); /* 30% transparent box */
+  padding: 25px;
+}
+
+tw-link {
+  color:navy; /* Set the link color */
+  transition: color .3s ease-in-out;
+}
+
+tw-link:hover { /* Mouse over a link & it turns color */
+  text-shadow: 1px 1px mediumseagreen; /* text shadow */
+  color: olive;
+  
+}
+.visited {	
+  color: mediumorchid;
+  
+}
+.visited:hover {
+  text-shadow: 1px 1px mediumseagreen; /* text shadow */	
+  color: olive;
+  
+}
+
+img { /* Images won't get wider than tw-passage container */
+  max-width: 100%;
+}
+
+.img-container {
+  margin: 1em;
+  float: left;
+}
+
+
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: left;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.footer {
+  /* The following changes the text box */
+  border: 5px groove gray; /* Gray border around the box */
+  border-radius: 25px; /* Rounded corners on the box */
+  background: rgba(255,255,255,0.7); /* 30% transparent box */
+  padding: 25px;
+}
+
+.aside-1 {
+  /* The following changes the text box */
+  border: 5px groove gray; /* Gray border around the box */
+  border-radius: 25px; /* Rounded corners on the box */
+  background: rgba(255,255,255,0.7); /* 30% transparent box */
+  padding: 25px;
+}
+
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+body {
+  padding: 2em; 
+}
+
+
+:: Story JavaScript [script]
+
+
+:: Wake
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1"><img src="https://static.wixstatic.com/media/caed2f_2cede54434fe4c23b4df6dce4b21282a%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz">--> (link-goto: "Insect")
+<img src="https://static.wixstatic.com/media/caed2f_0c02b38633d94879acd536a30fe8d0d4%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz">--> (link-goto: "Crustacean")
+<img src="https://static.wixstatic.com/media/caed2f_228debdb9c054eca970cfe644d544fb4%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz">--> (link-goto: "Reptile")
+ <img src="https://coffeelux.club/uploads/mutant_tent.png">--> (link-goto: "Cephalopod")
+ <img src="https://static.wixstatic.com/media/caed2f_d2565751f1694f15b84340bb131f4056%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz">--> (link-goto: "Bird")
+ <img src="https://static.wixstatic.com/media/caed2f_09e5745944e447efbbe00dd6903b318e%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz">--> (link-goto: "Bat")
+ <img src="https://coffeelux.club/uploads/mutant_claw.png">--> (link-goto: "Werebeast")
+ <img src="https://coffeelux.club/uploads/mutant_turtle.png">--> (link-goto: "Turtle")
+</aside>
+  <footer class="footer">Welcome Traveller! You awake in your birth creche already a young adult -- android servitors are forcing you outside, but you gaze at the mirrored surface of the chrome chambers and see a humanoid....</footer>
+</div>
+
+
+:: Insect
+(set: $MutationPrime to "Antennae")
+(set: $Secretcheck to true)
+(set: $Portrait to '<img src="https://static.wixstatic.com/media/caed2f_2cede54434fe4c23b4df6dce4b21282a%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz" width="180px" height="180px">')
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1">$Portrait</aside>
+  <footer class="footer">You have $MutationPrime! 
+	(link-goto: "Continue", "Jyadon")
+</footer>
+</div>
+
+
+:: Reptile
+(set: $MutationPrime to "Poison Spit")
+(set: $Portrait to '<img src="https://static.wixstatic.com/media/caed2f_228debdb9c054eca970cfe644d544fb4%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz" width="180px" height="180px">')
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1">$Portrait</aside>
+  <footer class="footer">You have $MutationPrime! 
+	(link-goto: "Continue", "Jyadon")
+</footer>
+</div>
+
+
+:: Werebeast
+(set: $MutationPrime to "Claws")
+(set: $Damage to $Damage+3)
+(set: $Portrait to '<img src="https://coffeelux.club/uploads/mutant_claw.png" width="180px" height="180px">')
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1">$Portrait</aside>
+  <footer class="footer">You have $MutationPrime! 
+	(link-goto: "Continue", "Jyadon")
+</footer>
+</div>
+
+
+:: Bat
+(set: $MutationPrime to "Vampirism")
+(set: $Vampirecheck to true)
+(set: $Portrait to '<img src="https://static.wixstatic.com/media/caed2f_09e5745944e447efbbe00dd6903b318e%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz" width="180px" height="180px">')
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1">$Portrait</aside>
+  <footer class="footer">You have $MutationPrime! 
+	(link-goto: "Continue", "Jyadon")
+</footer>
+</div>
+
+
+:: Crustacean
+(set: $MutationPrime to "Carapace")
+(set: $AC to $AC+3)
+(set: $Portrait to '<img src="https://static.wixstatic.com/media/caed2f_0c02b38633d94879acd536a30fe8d0d4%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz" width="180px" height="180px">')
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1">$Portrait</aside>
+  <footer class="footer">You have $MutationPrime! 
+	(link-goto: "Continue", "Jyadon")
+</footer>
+</div>
+
+
+:: Cephalopod
+(set: $MutationPrime to "Tentacles")
+(set: $Portrait to '<img src="https://coffeelux.club/uploads/mutant_tent.png" width="180px" height="180px">')
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1">$Portrait</aside>
+  <footer class="footer">You have $MutationPrime! 
+	(link-goto: "Continue", "Jyadon")
+</footer>
+</div>
+
+
+:: Turtle
+(set: $MutationPrime to "Carapace")
+(set: $AC to $AC+3)
+(set: $Portrait to '<img src="https://coffeelux.club/uploads/mutant_turtle.png" width="180px" height="180px">')
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1">$Portrait</aside>
+  <footer class="footer">You have $MutationPrime! 
+	(link-goto: "Continue", "Jyadon")
+</footer>
+</div>
+
+
+:: Bird
+(set: $MutationPrime to "Wings")
+(set: $Evasioncheck to true)
+(set: $Portrait to '<img src="https://static.wixstatic.com/media/caed2f_d2565751f1694f15b84340bb131f4056%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz" width="180px" height="180px">')
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1">$Portrait</aside>
+  <footer class="footer">You have $MutationPrime! 
+	(link-goto: "Continue", "Jyadon")
+</footer>
+</div>
+
+
+:: Start
+<div class="wrapper">
+  <article class="main">
+    <p>Your cells are being knitted together....</p>  
+  </article>
+  <aside class="aside aside-1">dna/cell image</aside>
+  <footer class="footer"> Spaceship Generation floats through the vastness of an unknown galaxy.... (link-goto: "Wake")
+</footer>
+</div>
+(set: $Profession to "Unemployed")
+(set: $job to false)
+(set: $Athletics to 3)
+(set: $Brains to 3)
+(set: $Charm to 3)
+(set: $Durability to 3)
+(Set: $HP to 4)
+(Set: $AC to 0)
+(set: $MutationPrime to "None")
+(set: $MutationSecond to "None")
+(set: $Vampirecheck to false)
+(set: $Evasioncheck to false)
+(set:$Secretcheck to false)
+(set: $Inv to (datamap: "pet", false, "QuantumBox", false, "figure", false, "SpacetimeNecklace", false, "wrench", false))
+(set: $box to false)
+(set: $Roll to 0)
+(set: $Attack to 0)
+(set: $Damage to 0)
+(set: $exp to 0)
+
+
+:: Jyadon
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1">$Portrait</aside>
+  <footer class="footer">The steel vault closes behind you. Metallic and chemical odors are replaced by organic dirt, pollen, and animal smells.  You are new to this world, but your mind is filled with ideas, images, and concepts: A tutorial of what it means to be a thing called "human" and how to eat, shelter, and survive.  A man stands in front of you, and you know what seperates you is the thing called age.  He must be listened to for having lived so long.
+(link-goto: "Listen")
+</footer>
+</div>
+
+
+:: Listen
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1">JYADON Portrait</aside>
+  <footer class="footer">"Hello child, my name is Jyadon.  Welcome to Terra. It is time to enter the world and contribute to The Wheel. You will become an apprentice to a guildmaster from our tribe. You can choose your part."
+(link-goto: "Guild", "Profession")
+</footer>
+</div>
+
+
+:: Profession
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
+  <aside class="aside aside-1">
+$Portrait
+
+(link-goto: "Beast Master")
+(link-goto: "Diplomat")
+(link-goto: "Junk Dealer")
+(link-goto: "Medicine Man")
+(link-goto: "Fixer")</aside>
+  <footer class="footer">You are then told that the next several years of study will prepare you for your future with the tribe, and your place in The Wheel.
+</footer>
+</div>
+
+
+:: Beast Master
+[(set: $Profession to "Beast Master")]
+(set: $Athletics to $Athletics +2)
+(set: $Charm to $Charm +1)
+(set: $Durability to $Durability +1)
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(set: $HP to $HP + $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)</p>  
+  </article>
+  <aside class="aside aside-1"><img src="https://coffeelux.club/uploads/fritzhalf.jpg"></aside>
+  <footer class="footer">After years... you are a $Profession!
+  
+As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls, train with the Rangers, and tinker in the Workshop.
+
+(link-goto: "Keepers", "Scrolls")
+(link-goto: "Rangers", "Rangers")
+(link-goto: "Workshop", "Workshop")
+</footer>
+</div>
+(set: $job to true)
+
+
+:: Diplomat
+[(set: $Profession to "Diplomat")]
+(set: $Brains to $Brains +1)
+(set: $Charm to $Charm +3)
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(set: $HP to $HP + $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)</p>  
+  </article>
+  <aside class="aside aside-1">GUILD Portrait</aside>
+  <footer class="footer">After years... you are a $Profession!
+
+As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls, train with the Rangers, and tinker in the Workshop.
+
+(link-goto: "Keepers", "Scrolls")
+(link-goto: "Rangers", "Rangers")
+(link-goto: "Workshop", "Workshop")
+</footer>
+</div>
+(set: $job to true)
+
+
+:: Junk Dealer
+[(set: $Profession to "Trader")]
+(set: $Brains to $Brains +1)
+(set: $Charm to $Charm +2)
+(set: $Durability to $Durability +1)
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(set: $HP to $HP + $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)</p>  
+  </article>
+  <aside class="aside aside-1">GUILD Portrait</aside>
+  <footer class="footer">After years... you are a $Profession!
+
+As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls, train with the Rangers, and tinker in the Workshop.
+
+(link-goto: "Keepers", "Scrolls")
+(link-goto: "Rangers", "Rangers")
+(link-goto: "Workshop", "Workshop")
+</footer>
+</div>
+(set: $job to true)
+
+
+:: Medicine Man
+[(set: $Profession to "Medicine Man")]
+(set: $Brains to $Brains +1)
+(set: $Charm to $Charm +1)
+(set: $Durability to $Durability +2)
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(set: $HP to $HP + $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)</p>  
+  </article>
+  <aside class="aside aside-1">GUILD Portrait</aside>
+  <footer class="footer">After years... you are a $Profession!
+
+As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls, train with the Rangers, and tinker in the Workshop.
+
+(link-goto: "Keepers", "Scrolls")
+(link-goto: "Rangers", "Rangers")
+(link-goto: "Workshop", "Workshop")
+</footer>
+</div>
+(set: $job to true)
+
+
+:: Fixer
+[(set: $Profession to "Fixer")]
+(set: $Athletics to $Athletics +1)
+(set: $Brains to $Brains +2)
+(set: $Durability to $Durability +1)
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(set: $HP to $HP + $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)</p>  
+  </article>
+  <aside class="aside aside-1">GUILD Portrait</aside>
+  <footer class="footer">After years... you are a $Profession!
+
+As you grow older, more able, and reach the end of your apprenticeship you make visits to the Keeper of the Scrolls, train with the Rangers, and tinker in the Workshop.
+
+(link-goto: "Keepers", "Scrolls")
+(link-goto: "Rangers", "Rangers")
+(link-goto: "Workshop", "Workshop")
+</footer>
+</div>
+(set: $job to true)
+
+
+:: Scrolls
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv's (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+</p>  
+  </article>
+  <aside class="aside aside-1">KEEPER Portrait</aside>
+  <footer class="footer">I'm the Keeper!
+(If: $exp > 19)[Keeper: "You look fit enough to venture beyond village if the Wheel leads there."
+(link-goto: "Village Gate")]
+
+(link-goto: "Read x", "Scrollx")
+(link-goto: "Read y", "Scrolly")
+(link-goto: "Read z", "Scrollz")
+(link-goto: "Workshop", "Workshop")
+(link-goto: "Gymnarium", "Rangers")
+
+</footer>
+</div>
+
+
+:: Rangers
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)
+
+exp= $exp 
+(set: _have to (find: _item where ($Inv's (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+</p>   
+  </article>
+  <aside class="aside aside-1">RANGER Portrait
+</aside>
+<footer class="footer">I'm a Ranger!
+
+(link-goto: "Librarium", "Scrolls")
+(link-goto: "Workshop", "Workshop")
+[[Training Pit]]
+
+</footer>
+</div>
+
+
+:: Scrollx
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv's (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+</p>  
+  </article>
+  <aside class="aside aside-1">SCROLL Portrait</aside>
+  <footer class="footer">
+  "Crew casulaties are such we need to be thinking bare minimum survival scenarios. At the very least we need a science officer to find a habitable planet, an engineer to keep the ship running, and a pilot to navigate to the new homeworld"
+(link-goto: "Back to Librarium", "Scrolls")
+</footer>
+</div>
+
+
+:: Scrolly
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv's (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+</p>  
+  </article>
+  <aside class="aside aside-1">SCROLL Portrait</aside>
+  <footer class="footer">
+  "The monitor readouts from the birth creche showed anomolies in the genetic matrix so the remaining scientists woke three of their eldest from cryosleep. Each displayed a beneficial adaptive mutation"
+(link-goto: "Back to Librarium", "Scrolls")
+</footer>
+</div>
+
+
+:: Scrollz
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv's (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+</p>  
+  </article>
+  <aside class="aside aside-1">SCROLL Portrait</aside>
+  <footer class="footer">
+  "Parents are building mentor toys to prepare the next generation of engineers, scientists, and pilots -- our children sleeping safe in their birth creche.  Certainly the fear is that the radiation sickness will take this generation before we even meet our progeny to train them."
+(link-goto: "Back to Librarium", "Scrolls")
+</footer>
+</div>
+
+
+:: Training Pit
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)</p>  
+  </article>
+  <aside class="aside aside-1">Beast Portrait
+</aside>
+<footer class="footer">(if: (random:1,2) is 1)[(set: $enemyName to (either:"dogbot","deathrabbit"))
+A $enemyName crawls out of the shadows!(set: $enemyHealth to 8)
+(display: "Combat")
+]
+(else:)[
+	The pit looks empty... //for now.// Check later.
+	Go back to [[Rangers]]
+]
+</footer>
+</div>
+
+
+:: Combat
+(set: $enemyHit to (random:3,5))
+(set: $Dodge to (random:1,4))
+(if: $Evasioncheck AND $Dodge > 2) [You flew and dodged the ATTACK!]
+(else:)[(color:red)[The $enemyName ATTACKS YOU! //-$enemyHit//]
+(set: $enemyHit to $enemyHit - $AC)You absorb $AC from your armor. 
+(set: $HP to $HP - $enemyHit)You have [$HP HP].]
+(if: $HP > 0)[(set: $hit to 5 + $Damage)
+	(set: $Attack to $Athletics + 2)
+	(set: $Roll to (random:1,10))
+	(if: $Roll > $Attack) [
+	You tried to Hit it but you missed!
+	]
+	(else:)[(set: $enemyHealth to $enemyHealth - $hit)
+	(if: $Vampirecheck) [(set: $HP to $HP + 1)
+	(color:green) [Your hit steals life! [$HP HP].]]
+	(color:green) [You HIT the $enemyName![-$hit]]]
+	(if: $enemyHealth > 0)[It has $enemyHealth HP left.
+	
+	(link-goto: "Attack", "Combat")
+	(link-goto: "Retreat", "Rangers")	
+	]
+	(else:)[You have defeated the $enemyName. //+10 exp!//
+	(set: $exp to $exp + 10)You now have $exp exp.
+
+	(link-goto: "Speak of victory to Ranger", "Rangers")
+	]
+]
+(else:)[
+	(color:red)[☠ You died! ☠
+	☠ GAME OVER ☠]
+]
+
+
+:: Workshop
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv's (_item)), ...(datanames: $Inv)))
+You are Carring: _have 
+</p>   
+  </article>
+  <aside class="aside aside-1">WORKSHOP Portrait
+</aside>
+<footer class="footer">
+You see:
+(if: not $Inv's "QuantumBox")[[Quantum Box]<getbox|]
+(click: ?getbox)[You pick up the Quantum Box.....!
+(set: $Inv's "QuantumBox" to true)
+(set: $box to true)]
+
+(link-goto: "Librarium", "Scrolls")
+(link-goto: "Gymnarium", "Rangers")
+(link-goto: "Workbench", "Workbench")
+
+</footer>
+</div>
+
+
+:: Workbench
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv's (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+</p>  
+  </article>
+  <aside class="aside aside-1">WORKBENCH Portrait</aside>
+  <footer class="footer">Use your brains to tinker on things.....
+(if: $box is true) [(link-goto: "Operate the QuantumBox")]
+  
+(link-goto: "Librarium", "Scrolls")
+(link-goto: "Workshop", "Workshop")
+(link-goto: "Gymnarium", "Rangers")
+</footer>
+</div>
+
+
+:: Operate the QuantumBox
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv's (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+</p>  
+  </article>
+  <aside class="aside aside-1">QUANTUMBOX Portrait</aside>
+  <footer class="footer">You tinker....
+(set: $ArtCheck to $Brains + 2)(set: $ArtRoll to (random:1,10))
+	(if: $ArtRoll > $Brains) 
+	[You cannot understand the box.]
+	(else:)
+	[You figured out the BOX!!!! //+10 exp!//
+	(set: $exp to $exp + 10)You now have $exp exp.]
+	
+(link-goto: "Librarium", "Scrolls")
+(link-goto: "Workshop", "Workshop")
+(link-goto: "Gymnarium", "Rangers")
+</footer>
+</div>
+
+
+:: Village Gate
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv's (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+</p>  
+  </article>
+  <aside class="aside aside-1">WHEEL Portrait</aside>
+  <footer class="footer">The Wheel.....
+
+(link-goto: "The Warrens", "Deathrabbits")
+(link-goto: "Storage Warehouse", "Dogbots")
+
+</footer>
+</div>
+
+
+:: Dogbots
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv's (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+</p>  
+  </article>
+  <aside class="aside aside-1">Portrait</aside>
+  <footer class="footer">dogbots
+
+(link-goto: "The Warrens", "Deathrabbits")
+
+</footer>
+</div>
+
+
+:: Deathrabbits
+<div class="wrapper">
+  <article class="main">
+    <p>(print: "Primary Mutation=") (Print: $MutationPrime)
+	
+(print: "ATHLETICS=") (print: $Athletics)
+(print: "BRAINS=") (print: $Brains)
+(print: "CHARM=") (print: $Charm)
+(print: "DURABILITY=") (print: $Durability)
+(print: "HP=") (print: $HP) 
+(print: "AC=") (print: $AC)
+
+exp= $exp
+(set: _have to (find: _item where ($Inv's (_item)), ...(datanames: $Inv)))
+You are Carring: _have
+</p>  
+  </article>
+  <aside class="aside aside-1">Portrait</aside>
+  <footer class="footer">deathrabbits
+(if: $Secretcheck is true) [You see:
+(if: not $Inv's "SpacetimeNecklace")[[Spacetime Necklace]<getnecklace|]
+(click: ?getnecklace)[You pick up the Spacetime Necklace.....!
+(set: $Inv's "SpacetimeNecklace" to true)
+(set: $necklace to true)]]
+
+(link-goto: "Storage Warehouse", "Dogbots")
+
+</footer>
+</div>
+
+
