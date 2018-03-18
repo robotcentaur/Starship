@@ -149,6 +149,7 @@ body {
 	(link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)
 &lt;/footer&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Reptile" tags="" position="0,301" size="100,100">(set: $MutationPrime to &quot;Poison Spit&quot;)
+(set: $Spitcheck to true)
 (set: $Portrait to &#39;&lt;img src=&quot;https://static.wixstatic.com/media/caed2f_228debdb9c054eca970cfe644d544fb4%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz&quot; width=&quot;180px&quot; height=&quot;180px&quot;&gt;&#39;)
 &lt;div class=&quot;wrapper&quot;&gt;
   &lt;article class=&quot;main&quot;&gt;
@@ -264,7 +265,8 @@ body {
 (set: $MutationSecond to &quot;None&quot;)
 (set: $Vampirecheck to false)
 (set: $Evasioncheck to false)
-(set:$Secretcheck to false)
+(set: $Secretcheck to false)
+(set: $Spitcheck to false)
 (set: $Inv to (datamap: &quot;pet&quot;, false, &quot;QuantumBox&quot;, false, &quot;figure&quot;, false, &quot;SpacetimeNecklace&quot;, false, &quot;wrench&quot;, false))
 (set: $box to false)
 (set: $Roll to 0)
@@ -585,7 +587,7 @@ A $enemyName crawls out of the shadows!(set: $enemyHealth to 8)
 &lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="25" name="Combat" tags="" position="1102,499" size="100,100">(set: $enemyHit to (random:3,5))
+</tw-passagedata><tw-passagedata pid="25" name="Combat" tags="" position="1102,499" size="100,100">(set: $enemyHit to (random:3,4))
 (set: $Dodge to (random:1,4))
 (if: $Evasioncheck AND $Dodge &gt; 2) [You flew and dodged the ATTACK!]
 (else:)[(color:red)[The $enemyName ATTACKS YOU! //-$enemyHit//]
@@ -603,6 +605,8 @@ A $enemyName crawls out of the shadows!(set: $enemyHealth to 8)
 	(color:green) [You HIT the $enemyName![-$hit]]]
 	(if: $enemyHealth &gt; 0)[It has $enemyHealth HP left.
 	
+	(if: $Spitcheck is true) [[Poison Spit]&lt;spit|]
+(click: ?spit)[(set: $enemyHealth to $enemyHealth - 3)(color:green) [Corrosive poison spit covers the $enemyName!](display:&quot;Combat&quot;)]
 	(link-goto: &quot;Attack&quot;, &quot;Combat&quot;)
 	(link-goto: &quot;Retreat&quot;, &quot;Rangers&quot;)	
 	]
