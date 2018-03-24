@@ -106,10 +106,13 @@ body {
 
 
 :: Wake
+<div class="wrapper">
+  <article class="main">
     <p>(print: "ATHLETICS=") (print: $Athletics)
 (print: "BRAINS=") (print: $Brains)
 (print: "CHARM=") (print: $Charm)
 (print: "DURABILITY=") (print: $Durability)</p>  
+  </article>
   <aside class="aside aside-1"><img src="https://static.wixstatic.com/media/caed2f_2cede54434fe4c23b4df6dce4b21282a%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz">--> (link-goto: "Insect")
 <img src="https://static.wixstatic.com/media/caed2f_0c02b38633d94879acd536a30fe8d0d4%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz">--> (link-goto: "Crustacean")
 <img src="https://static.wixstatic.com/media/caed2f_228debdb9c054eca970cfe644d544fb4%7Emv2.png_srz_36_36_85_22_0.50_1.20_0.00_png_srz">--> (link-goto: "Reptile")
@@ -120,6 +123,7 @@ body {
  <img src="https://coffeelux.club/uploads/mutant_turtle.png">--> (link-goto: "Turtle")
 </aside>
   <footer class="footer">Welcome Traveller! You awake in your birth creche already a young adult -- android servitors are forcing you outside, but you gaze at the mirrored surface of the chrome chambers and see a humanoid....</footer>
+</div>
 
 
 :: Insect
