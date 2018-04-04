@@ -2,11 +2,8 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.jsx',
-  target: 'node',
-  node: {
-    fs: 'empty'
-  },
+  entry: './src/indexDebug.jsx',
+  mode: 'development',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -22,7 +19,7 @@ module.exports = {
       loader: 'babel-loader',
       options: {
         presets: ['react', 'es2015']
-      } 
+      }
     },
     {
       test: /\.css$/,

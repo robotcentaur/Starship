@@ -1,2 +1,14 @@
-::Wake
-<div class="wrapper" data-reactroot=""><article class="main">There once was fellow that looked like a marshmellow (link-goto: "Next", "Werebeast")</article></div>
+:: Wake
+<div class="wrapper" data-reactroot="">
+   <article class="main">
+      <p>(print: "ATHLETICS=") (print: $Athletics) (print: "BRAINS=") (print: $Brains) (print: "CHARM=") (print: $Charm) (print: "DURABILITY=") (print: $Durability)</p>
+   </article>
+   <aside class="aside aside-1">
+      <div>
+         <div><img src="https://coffeelux.club/uploads/mutant_tent.png" width="25%"/>--&gt; (link-goto: "Crustacean")</div>
+         <div><img src="https://coffeelux.club/uploads/mutant_claw.png" width="25%"/>--&gt; (link-goto: "Crustacean")</div>
+         <div><img src="https://coffeelux.club/uploads/mutant_turtle.png" width="25%"/>--&gt; (link-goto: "Crustacean")</div>
+      </div>
+   </aside>
+   <footer class="footer">Welcome Traveller! You awake in your birth creche already a young adult -- android servitors are forcing you outside, but you gaze at the mirrored surface of the chrome chambers and see a humanoid....</footer>
+</div>

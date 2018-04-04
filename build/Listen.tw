@@ -1,0 +1,2 @@
+:: Listen
+<div class="wrapper" data-reactroot=""><article class="main"><p>(print: "ATHLETICS=") (print: $Athletics) (print: "BRAINS=") (print: $Brains) (print: "CHARM=") (print: $Charm) (print: "DURABILITY=") (print: $Durability)</p></article><aside class="aside aside-1">$Portrait</aside><footer class="footer">"Hello child, my name is Jyadon.  Welcome to Terra. It is time to enter the world and contribute to The Wheel. You will become an apprentice to a guildmaster from our tribe. You can choose your part."<!-- -->(link-goto: "Guild", "Profession)</footer></div>

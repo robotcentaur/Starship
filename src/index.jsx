@@ -5,10 +5,15 @@ import path from 'path'
 
 
 import Wake from './stories/Wake'
+import Insect from './stories/Insect'
+import Bat from './stories/Bat'
 import Werebeast from './stories/Werebeast'
+import Profession from './stories/Profession'
+import Listen from './stories/Listen'
+import Jyadon from './stories/Jyadon'
 
-var stories = [Wake, Werebeast]
-console.log(Wake)
+var stories = [Wake, Werebeast, Insect, Bat,
+               Profession, Listen, Jyadon ]
 
 stories.forEach((story) => {
 

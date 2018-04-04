@@ -8,9 +8,9 @@ export default class Container extends React.Component {
 
   render() {
     return (
-      <div class="wrapper">
-          {this.props.children}
-      </div>
+      <article class="main">
+        {this.props.children}
+      </article>
     );
   }
 }

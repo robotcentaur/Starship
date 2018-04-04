@@ -1,0 +1,8 @@
+:: Profession
+<div class="wrapper" data-reactroot=""><article class="main"><p>(print: "ATHLETICS=") (print: $Athletics) (print: "BRAINS=") (print: $Brains) (print: "CHARM=") (print: $Charm) (print: "DURABILITY=") (print: $Durability)</p></article><aside class="aside aside-1">$Portrait<!-- -->
+(link-goto: "Beast Master")
+(link-goto: "Diplomat")
+(link-goto: "Junk Dealer")
+(link-goto: "Medicine Man")
+(link-goto: "Fixer")
+</aside><footer class="footer">You are then told that the next several years of study will prepare you for your future with the tribe, and your place in The Wheel.</footer></div>

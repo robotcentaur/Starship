@@ -1,0 +1,88 @@
+:: Story Stylesheet [stylesheet]
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+tw-story {	
+  /* The following changes the text */
+  color: gold; /* Set text to color */
+  text-shadow: 1px 1px orangered; /* text shadow */
+  font-size: 14px;
+  font-family: "Press Start 2P","Helvetica","Arial",sans-serif;
+}
+
+.main {
+  /* The following changes the text box */
+  background: rgba(255,255,255,0.7); /* 30% transparent box */
+  padding: 25px;
+}
+
+tw-link {
+  color:navy; /* Set the link color */
+  transition: color .3s ease-in-out;
+}
+
+tw-link:hover { /* Mouse over a link & it turns color */
+  text-shadow: 1px 1px mediumseagreen; /* text shadow */
+  color: olive;
+}
+
+.visited {	
+  color: mediumorchid;
+  
+}
+.visited:hover {
+  text-shadow: 1px 1px mediumseagreen; /* text shadow */	
+  color: olive;
+  
+}
+
+img { /* Images won't get wider than tw-passage container */
+  max-width: 100%;
+}
+
+.img-container {
+  margin: 1em;
+  float: left;
+}
+
+
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: left;
+  background: url(https://coffeelux.club/uploads/alien_border.png)
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.footer {
+  /* The following changes the text box */
+  background: rgba(255,255,255,0.7); /* 30% transparent box */
+  padding: 25px;
+}
+
+.aside-1 {
+  /* The following changes the text box */
+  background: rgba(255,255,255,0.7); /* 30% transparent box */
+  padding: 25px;
+}
+
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+body {
+  padding: 2em; 
+}

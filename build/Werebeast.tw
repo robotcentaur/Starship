@@ -1,2 +1,2 @@
-::Werebeast
-<div class="wrapper" data-reactroot=""><article class="main"><aside class="aside aside-1"><img src="https://coffeelux.club/uploads/mutant_claw.png" width="180px" height="180px"/></aside><footer class="footer">You have <!-- -->Claws<!-- -->! (link-goto: "Continue", "Jyadon")</footer></article></div>
+:: Werebeast
+<div class="wrapper" data-reactroot="">(set: $MutationPrime to "Claws") (set: $Damage to $Damage+3) (set: $Portrait to &#x27;<img src="https://coffeelux.club/uploads/mutant_claw.png" width="180px" height="180px"/>&#x27;)<article class="main"><p>(print: "ATHLETICS=") (print: $Athletics) (print: "BRAINS=") (print: $Brains) (print: "CHARM=") (print: $Charm) (print: "DURABILITY=") (print: $Durability)</p></article><aside class="aside aside-1">$Portrait</aside><footer class="footer">You have <!-- -->Claws<!-- -->! (link-goto: "Continue", "Jyadon")</footer></div>

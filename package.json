@@ -1,41 +1,25 @@
 {
-  "name": "starship",
+  "name": "compiler",
   "version": "1.0.0",
-  "description": "A game inside an O'Neil cylinder",
-  "main": "script.js",
+  "description": "Twee Compiler",
+  "main": "index.jsx",
   "scripts": {
-    "dev": "webpack -w",
-    "build": "webpack -p",
+    "decompile": "TWEEGO_PATH=./formats tweego -d 'Starship.html' -f Harlowe > index.tw",
+    "compile": "TWEEGO_PATH=./formats tweego build -f Harlowe > build.html",
+    "bundle": "webpack -p",
+    "build": "npm run bundle && node ./dist/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/robotcentaur/Starship.git"
-  },
-  "keywords": [
-    "game",
-    "twine",
-    "sci-fi"
-  ],
-  "author": "Ty Connors, Sam Clifford",
+  "author": "Ty Connors",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/robotcentaur/Starship/issues"
-  },
-  "homepage": "https://github.com/robotcentaur/Starship#readme",
   "dependencies": {
-    "express": "^4.16.3",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2",
-    "volleyball": "^1.4.1",
-    "webpack": "^4.1.1"
-  },
-  "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "webpack-cli": "^2.0.11"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^4.3.0",
+    "webpack-cli": "^2.0.13"
   }
 }

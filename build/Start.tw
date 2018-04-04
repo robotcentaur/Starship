@@ -1,0 +1,9 @@
+:: StoryTitle
+Starship
+
+:: Start
+Hello!
+(link-goto: "Next", "Wake")
+
+:: StorySettings
+ifid:ee75a960-2688-4c50-b3cc-55550a9b6b41
