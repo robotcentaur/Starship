@@ -9,7 +9,7 @@ import ImageList from '../components/ImageList'
 const races = [{image:'mutant_tent.png', name: 'Cephlapod'},
                {image:'mutant_claw.png', name: 'Werebeast'},
                {image: 'mutant_turtle.png', name: 'Turtle'}, 
-               {image: 'crusatcean.png', name: 'Crustacean'} ]
+               {image: 'crustacean.png', name: 'Crustacean'} ]
 const Wake = ReactDOMServer.renderToString(
   <Container>
     <Stats>

@@ -13,7 +13,7 @@ export default class Portait extends React.Component {
       <div>
         { this.props.list.map((race) => 
             <div>
-              <img src={IMG_URL + race.image} width="25%" />
+              <img src={IMG_URL + race.image} width="12%" />
               --> (link-goto: "{race.name}")
             </div>
           )

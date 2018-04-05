@@ -18,10 +18,10 @@ export default class CharacterIntro extends React.Component {
         { this.props.children }
         <Stats>
           <p>
-            (print: "ATHLETICS=") (print: $Athletics)
-            (print: "BRAINS=") (print: $Brains)
-            (print: "CHARM=") (print: $Charm)
-            (print: "DURABILITY=") (print: $Durability)
+            ATHLETICS= (print: $Athletics) <br/>
+            BRAINS= (print: $Brains) <br/>
+            CHARM= (print: $Charm) <br/>
+            DURABILITY= (print: $Durability) <br/>
           </p>
         </Stats>
         <Portrait >

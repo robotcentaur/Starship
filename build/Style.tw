@@ -7,12 +7,16 @@ tw-story {
   text-shadow: 1px 1px orangered; /* text shadow */
   font-size: 14px;
   font-family: "Press Start 2P","Helvetica","Arial",sans-serif;
+  padding: 5% 10%
 }
 
 .main {
   /* The following changes the text box */
   background: rgba(255,255,255,0.7); /* 30% transparent box */
-  padding: 25px;
+  background: url(https://coffeelux.club/uploads/pixelized1_tall.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 50px 70px;
 }
 
 tw-link {
@@ -50,7 +54,8 @@ img { /* Images won't get wider than tw-passage container */
   flex-flow: row wrap;
   font-weight: bold;
   text-align: left;
-  background: url(https://coffeelux.club/uploads/alien_border.png)
+  z-index: 10;
+
 }
 
 .wrapper > * {
@@ -61,13 +66,19 @@ img { /* Images won't get wider than tw-passage container */
 .footer {
   /* The following changes the text box */
   background: rgba(255,255,255,0.7); /* 30% transparent box */
-  padding: 25px;
+  padding: 50px 70px;
+  background: url(https://coffeelux.club/uploads/pixelized1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .aside-1 {
   /* The following changes the text box */
   background: rgba(255,255,255,0.7); /* 30% transparent box */
-  padding: 25px;
+  background: url(https://coffeelux.club/uploads/pixelized1_tall.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 50px 70px;
 }
 
 

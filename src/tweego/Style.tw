@@ -50,7 +50,6 @@ img { /* Images won't get wider than tw-passage container */
   flex-flow: row wrap;
   font-weight: bold;
   text-align: left;
-  background: url(https://coffeelux.club/uploads/alien_border.png)
 }
 
 .wrapper > * {
