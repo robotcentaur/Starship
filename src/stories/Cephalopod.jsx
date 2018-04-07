@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server'
 import CharacterIntro from '../components/CharacterIntro'
 
 const coffeeLux = 'https://coffeelux.club/uploads/'
-const Insect = ReactDOMServer.renderToString(
+const Cephalopod = ReactDOMServer.renderToString(
   <CharacterIntro
     navigation= '(link-goto: "Continue", "Jyadon")'
     >

@@ -10,9 +10,9 @@ export default class CharacterIntro extends React.Component {
   }
 
   render() {
-    const content = this.props.content || 'You have {MutationPrime}! (link-goto: "Continue", "Jyadon")'
+    const content = this.props.content || 'You have $MutationPrime!\n'
     // should be "Continue" to "Jyadon"
-    const navigation = this.props.navigation || '(link-goto: "Jyadon")'
+    const navigation = this.props.navigation || '(link-goto: "Continue", "Jyadon")'
     return (
       <Container>
         { this.props.children }
@@ -25,7 +25,7 @@ export default class CharacterIntro extends React.Component {
           </p>
         </Stats>
         <Portrait >
-          $Portrait
+          { this.props.portrait || '$Portrait' }
         </Portrait >
         <footer class="footer">
           { content }

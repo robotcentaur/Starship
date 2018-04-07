@@ -9,7 +9,7 @@ const Bird = ReactDOMServer.renderToString(
     >
     (set: $MutationPrime to "Wings")
     (set: $Evasioncheck to true)
-    (set: $Portrait to '<img src={coffeeLux + races.image} width="180px" height="180px"/>')
+    (set: $Portrait to '<img src={coffeeLux + 'bird.png'} width="180px" height="180px"/>')
   </CharacterIntro>
 )
 

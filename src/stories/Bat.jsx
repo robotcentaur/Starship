@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server'
 import CharacterIntro from '../components/CharacterIntro'
 
 const coffeeLux = 'https://coffeelux.club/uploads/'
-const Insect = ReactDOMServer.renderToString(
+const Bat = ReactDOMServer.renderToString(
   <CharacterIntro>
     (set: $MutationPrime to "Vampirism")
     (set: $Vampirecheck to true)
@@ -12,6 +12,6 @@ const Insect = ReactDOMServer.renderToString(
 )
 
 export default {
-  name: 'Insect',
-  body: Insect
+  name: 'Bat',
+  body: Bat
 }

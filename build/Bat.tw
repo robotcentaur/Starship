@@ -1,6 +1,6 @@
-:: Insect
-<div class="wrapper" data-reactroot="">(set: $MutationPrime to "Antennae") (set: $Secretcheck to true) (set: $Portrait to '
-  <img src="https://coffeelux.club/uploads/insect.png" width="180px" height="180px" />')
+:: Bat
+<div class="wrapper" data-reactroot="">(set: $MutationPrime to "Vampirism") (set: $Vampirecheck to true) (set: $Portrait to '
+  <img src="https://coffeelux.club/uploads/bat.png" width="180px" height="180px" />')
   <article class="main">
     <p>ATHLETICS= (print: $Athletics)
       <br/>BRAINS= (print: $Brains)

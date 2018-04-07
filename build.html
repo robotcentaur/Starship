@@ -11,29 +11,35 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Starship" startnode="5" creator="Tweego" creator-version="1.2.0" ifid="EE75A960-2688-4C50-B3CC-55550A9B6B41" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Story Stylesheet" */
+<tw-storydata name="Starship" startnode="8" creator="Tweego" creator-version="1.2.0" ifid="EE75A960-2688-4C50-B3CC-55550A9B6B41" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Story Stylesheet" */
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
 tw-story {	
   /* The following changes the text */
   color: gold; /* Set text to color */
-  text-shadow: 1px 1px orangered; /* text shadow */
   font-size: 14px;
   font-family: "Press Start 2P","Helvetica","Arial",sans-serif;
-  padding: 5% 10%
+  padding: 5% 10%;
+  background: #222;
 }
 
-.main {
+.main, .aside-1 {
+  min-height: 300px;
+}
+.wrapper .main {
   /* The following changes the text box */
   background: rgba(255,255,255,0.7); /* 30% transparent box */
   background: url(https://coffeelux.club/uploads/pixelized1_tall.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 50px 70px;
+  padding: 30px 70px;
 }
 
 tw-link {
-  color:navy; /* Set the link color */
+  color:white; /* Set the link color */
+  padding: 5px;
+  border-bottom: 1px grey solid;
+  border-radius: 5px;
   transition: color .3s ease-in-out;
 }
 
@@ -91,7 +97,8 @@ img { /* Images won't get wider than tw-passage container */
   background: url(https://coffeelux.club/uploads/pixelized1_tall.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 50px 70px;
+  padding: 40px 50px;
+  padding-left: 100px;
 }
 
 
@@ -105,18 +112,120 @@ img { /* Images won't get wider than tw-passage container */
   .main    { order: 2; }
   .aside-2 { order: 3; }
   .footer  { order: 4; }
-}
-
-body {
-  padding: 2em; 
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Insect" tags="" position="100,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;(set: $MutationPrime to &quot;Vampirism&quot;) (set: $Vampirecheck to true) (set: $Portrait to &amp;#x27;&lt;img src=&quot;https://coffeelux.club/uploads/bat.png&quot; width=&quot;180px&quot; height=&quot;180px&quot;/&gt;&amp;#x27;)&lt;article class=&quot;main&quot;&gt;&lt;p&gt;(print: &quot;ATHLETICS=&quot;) (print: $Athletics) (print: &quot;BRAINS=&quot;) (print: $Brains) (print: &quot;CHARM=&quot;) (print: $Charm) (print: &quot;DURABILITY=&quot;) (print: $Durability)&lt;/p&gt;&lt;/article&gt;&lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;/aside&gt;&lt;footer class=&quot;footer&quot;&gt;You have {MutationPrime}! (link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)&lt;!-- --&gt;(link-goto: &quot;Jyadon&quot;)&lt;/footer&gt;&lt;/div&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Jyadon" tags="" position="225,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;&lt;article class=&quot;main&quot;&gt;&lt;p&gt;(print: &quot;ATHLETICS=&quot;) (print: $Athletics) (print: &quot;BRAINS=&quot;) (print: $Brains) (print: &quot;CHARM=&quot;) (print: $Charm) (print: &quot;DURABILITY=&quot;) (print: $Durability)&lt;/p&gt;&lt;/article&gt;&lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;/aside&gt;&lt;footer class=&quot;footer&quot;&gt;The steel vault closes behind you. Metallic and chemical odors are replaced by organic dirt, pollen, and animal smells.  You are new to this world, but your mind is filled with ideas, images, and concepts: A tutorial of what it means to be a thing called &quot;human&quot; and how to eat, shelter, and survive.  A man stands in front of you, and you know what seperates you is the thing called age.  He must be listened to for having lived so long.&lt;!-- --&gt;(link-goto: &quot;Listen&quot;)&lt;/footer&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Listen" tags="" position="350,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;&lt;article class=&quot;main&quot;&gt;&lt;p&gt;(print: &quot;ATHLETICS=&quot;) (print: $Athletics) (print: &quot;BRAINS=&quot;) (print: $Brains) (print: &quot;CHARM=&quot;) (print: $Charm) (print: &quot;DURABILITY=&quot;) (print: $Durability)&lt;/p&gt;&lt;/article&gt;&lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;/aside&gt;&lt;footer class=&quot;footer&quot;&gt;&quot;Hello child, my name is Jyadon.  Welcome to Terra. It is time to enter the world and contribute to The Wheel. You will become an apprentice to a guildmaster from our tribe. You can choose your part.&quot;&lt;!-- --&gt;(link-goto: &quot;Guild&quot;, &quot;Profession)&lt;/footer&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Profession" tags="" position="475,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;&lt;article class=&quot;main&quot;&gt;&lt;p&gt;(print: &quot;ATHLETICS=&quot;) (print: $Athletics) (print: &quot;BRAINS=&quot;) (print: $Brains) (print: &quot;CHARM=&quot;) (print: $Charm) (print: &quot;DURABILITY=&quot;) (print: $Durability)&lt;/p&gt;&lt;/article&gt;&lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;!-- --&gt;
-(link-goto: &quot;Beast Master&quot;)
-(link-goto: &quot;Diplomat&quot;)
-(link-goto: &quot;Junk Dealer&quot;)
-(link-goto: &quot;Medicine Man&quot;)
-(link-goto: &quot;Fixer&quot;)
-&lt;/aside&gt;&lt;footer class=&quot;footer&quot;&gt;You are then told that the next several years of study will prepare you for your future with the tribe, and your place in The Wheel.&lt;/footer&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Start" tags="" position="600,100">Hello!
-(link-goto: &quot;Next&quot;, &quot;Wake&quot;)</tw-passagedata><tw-passagedata pid="6" name="Wake" tags="" position="725,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;&lt;article class=&quot;main&quot;&gt;&lt;p&gt;(print: &quot;ATHLETICS=&quot;) (print: $Athletics) (print: &quot;BRAINS=&quot;) (print: $Brains) (print: &quot;CHARM=&quot;) (print: $Charm) (print: &quot;DURABILITY=&quot;) (print: $Durability)&lt;/p&gt;&lt;/article&gt;&lt;aside class=&quot;aside aside-1&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;img src=&quot;https://coffeelux.club/uploads/mutant_tent.png&quot; width=&quot;25%&quot;/&gt;--&amp;gt; (link-goto: &quot;&lt;!-- --&gt;Cephlapod&lt;!-- --&gt;&quot;)&lt;/div&gt;&lt;div&gt;&lt;img src=&quot;https://coffeelux.club/uploads/mutant_claw.png&quot; width=&quot;25%&quot;/&gt;--&amp;gt; (link-goto: &quot;&lt;!-- --&gt;Werebeast&lt;!-- --&gt;&quot;)&lt;/div&gt;&lt;div&gt;&lt;img src=&quot;https://coffeelux.club/uploads/mutant_turtle.png&quot; width=&quot;25%&quot;/&gt;--&amp;gt; (link-goto: &quot;&lt;!-- --&gt;Turtle&lt;!-- --&gt;&quot;)&lt;/div&gt;&lt;div&gt;&lt;img src=&quot;https://coffeelux.club/uploads/crusatcean.png&quot; width=&quot;25%&quot;/&gt;--&amp;gt; (link-goto: &quot;&lt;!-- --&gt;Crustacean&lt;!-- --&gt;&quot;)&lt;/div&gt;&lt;/div&gt;&lt;/aside&gt;&lt;footer class=&quot;footer&quot;&gt;Welcome Traveller! You awake in your birth creche already a young adult -- android servitors are forcing you outside, but you gaze at the mirrored surface of the chrome chambers and see a humanoid....&lt;/footer&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Werebeast" tags="" position="850,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;(set: $MutationPrime to &quot;Claws&quot;) (set: $Damage to $Damage+3) (set: $Portrait to &amp;#x27;&lt;img src=&quot;https://coffeelux.club/uploads/mutant_claw.png&quot; width=&quot;180px&quot; height=&quot;180px&quot;/&gt;&amp;#x27;)&lt;article class=&quot;main&quot;&gt;&lt;p&gt;(print: &quot;ATHLETICS=&quot;) (print: $Athletics) (print: &quot;BRAINS=&quot;) (print: $Brains) (print: &quot;CHARM=&quot;) (print: $Charm) (print: &quot;DURABILITY=&quot;) (print: $Durability)&lt;/p&gt;&lt;/article&gt;&lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;/aside&gt;&lt;footer class=&quot;footer&quot;&gt;You have &lt;!-- --&gt;Claws&lt;!-- --&gt;! (link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)&lt;/footer&gt;&lt;/div&gt;</tw-passagedata></tw-storydata>
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Bat" tags="" position="100,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;(set: $MutationPrime to &quot;Vampirism&quot;) (set: $Vampirecheck to true) (set: $Portrait to &#39;
+  &lt;img src=&quot;https://coffeelux.club/uploads/bat.png&quot; width=&quot;180px&quot; height=&quot;180px&quot; /&gt;&#39;)
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;ATHLETICS= (print: $Athletics)
+      &lt;br/&gt;BRAINS= (print: $Brains)
+      &lt;br/&gt;CHARM= (print: $Charm)
+      &lt;br/&gt;DURABILITY= (print: $Durability)
+      &lt;br/&gt;
+    &lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;You have $MutationPrime! (link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Cephalopod" tags="" position="225,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;(set: $MutationPrime to &quot;Tentacles&quot;) (set: $Portrait to &#39;
+  &lt;img src=&quot;https://coffeelux.club/uploads/mutant_tent.png&quot; width=&quot;180px&quot; height=&quot;180px&quot; /&gt;&#39;)
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;ATHLETICS= (print: $Athletics)
+      &lt;br/&gt;BRAINS= (print: $Brains)
+      &lt;br/&gt;CHARM= (print: $Charm)
+      &lt;br/&gt;DURABILITY= (print: $Durability)
+      &lt;br/&gt;
+    &lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;You have $MutationPrime! (link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Crustacean" tags="" position="350,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;(set: $MutationPrime to &quot;Carapace&quot;) (set: $AC to $AC+3) (set: $Portrait to &#39;
+  &lt;img src=&quot;https://coffeelux.club/uploads/crustacean.png&quot; width=&quot;180px&quot; height=&quot;180px&quot; /&gt;&#39;)
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;ATHLETICS= (print: $Athletics)
+      &lt;br/&gt;BRAINS= (print: $Brains)
+      &lt;br/&gt;CHARM= (print: $Charm)
+      &lt;br/&gt;DURABILITY= (print: $Durability)
+      &lt;br/&gt;
+    &lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;You have $MutationPrime! (link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Insect" tags="" position="475,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;(set: $MutationPrime to &quot;Antennae&quot;) (set: $Secretcheck to true) (set: $Portrait to &#39;
+  &lt;img src=&quot;https://coffeelux.club/uploads/insect.png&quot; width=&quot;180px&quot; height=&quot;180px&quot; /&gt;&#39;)
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;ATHLETICS= (print: $Athletics)
+      &lt;br/&gt;BRAINS= (print: $Brains)
+      &lt;br/&gt;CHARM= (print: $Charm)
+      &lt;br/&gt;DURABILITY= (print: $Durability)
+      &lt;br/&gt;
+    &lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;You have $MutationPrime! (link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Jyadon" tags="" position="600,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;ATHLETICS= (print: $Athletics)
+      &lt;br/&gt;BRAINS= (print: $Brains)
+      &lt;br/&gt;CHARM= (print: $Charm)
+      &lt;br/&gt;DURABILITY= (print: $Durability)
+      &lt;br/&gt;
+    &lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;The steel vault closes behind you. Metallic and chemical odors are replaced by organic dirt, pollen, and animal smells. You are new to this world, but your mind is filled with ideas, images, and concepts: A tutorial of what it means to be a thing called
+    &quot;human&quot; and how to eat, shelter, and survive. A man stands in front of you, and you know what seperates you is the thing called age. He must be listened to for having lived so long.\n(link-goto: &quot;Listen&quot;)&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Listen" tags="" position="725,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;ATHLETICS= (print: $Athletics)
+      &lt;br/&gt;BRAINS= (print: $Brains)
+      &lt;br/&gt;CHARM= (print: $Charm)
+      &lt;br/&gt;DURABILITY= (print: $Durability)
+      &lt;br/&gt;
+    &lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;&quot;Hello child, my name is Jyadon. Welcome to Terra. It is time to enter the world and contribute to The Wheel. You will become an apprentice to a guildmaster from our tribe. You can choose your part.&quot;(link-goto: &quot;Guild&quot;, &quot;Profession)&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Profession" tags="" position="850,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;(print: &quot;ATHLETICS=&quot;) (print: $Athletics) (print: &quot;BRAINS=&quot;) (print: $Brains) (print: &quot;CHARM=&quot;) (print: $Charm) (print: &quot;DURABILITY=&quot;) (print: $Durability)&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait (link-goto: &quot;Beast Master&quot;) (link-goto: &quot;Diplomat&quot;) (link-goto: &quot;Junk Dealer&quot;) (link-goto: &quot;Medicine Man&quot;) (link-goto: &quot;Fixer&quot;)
+  &lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;You are then told that the next several years of study will prepare you for your future with the tribe, and your place in The Wheel.&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Start" tags="" position="975,100">Hello!
+(link-goto: &quot;Next&quot;, &quot;Wake&quot;)</tw-passagedata><tw-passagedata pid="9" name="Wake" tags="" position="1100,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;ATHLETICS= (print: $Athletics)
+      &lt;br/&gt;BRAINS= (print: $Brains)
+      &lt;br/&gt;CHARM= (print: $Charm)
+      &lt;br/&gt;DURABILITY= (print: $Durability)
+      &lt;br/&gt;
+    &lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;
+    &lt;div&gt;
+      &lt;div&gt;
+        &lt;img src=&quot;https://coffeelux.club/uploads/mutant_tent.png&quot; width=&quot;12%&quot; /&gt;--&gt; (link-goto: &quot;Cephalopod&quot;)&lt;/div&gt;
+      &lt;div&gt;
+        &lt;img src=&quot;https://coffeelux.club/uploads/mutant_claw.png&quot; width=&quot;12%&quot; /&gt;--&gt; (link-goto: &quot;Werebeast&quot;)&lt;/div&gt;
+      &lt;div&gt;
+        &lt;img src=&quot;https://coffeelux.club/uploads/mutant_turtle.png&quot; width=&quot;12%&quot; /&gt;--&gt; (link-goto: &quot;Turtle&quot;)&lt;/div&gt;
+      &lt;div&gt;
+        &lt;img src=&quot;https://coffeelux.club/uploads/crustacean.png&quot; width=&quot;12%&quot; /&gt;--&gt; (link-goto: &quot;Crustacean&quot;)&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;Welcome Traveller! You awake in your birth creche already a young adult -- android servitors are forcing you outside, but you gaze at the mirrored surface of the chrome chambers and see a humanoid....(link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Werebeast" tags="" position="1225,100">&lt;div class=&quot;wrapper&quot; data-reactroot=&quot;&quot;&gt;(set: $MutationPrime to &quot;Claws&quot;) (set: $Damage to $Damage+3) (set: $Portrait to &#39;
+  &lt;img src=&quot;https://coffeelux.club/uploads/mutant_claw.png&quot; width=&quot;180px&quot; height=&quot;180px&quot; /&gt;&#39;)
+  &lt;article class=&quot;main&quot;&gt;
+    &lt;p&gt;ATHLETICS= (print: $Athletics)
+      &lt;br/&gt;BRAINS= (print: $Brains)
+      &lt;br/&gt;CHARM= (print: $Charm)
+      &lt;br/&gt;DURABILITY= (print: $Durability)
+      &lt;br/&gt;
+    &lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class=&quot;aside aside-1&quot;&gt;$Portrait&lt;/aside&gt;
+  &lt;footer class=&quot;footer&quot;&gt;You have $MutationPrime! (link-goto: &quot;Continue&quot;, &quot;Jyadon&quot;)&lt;/footer&gt;
+&lt;/div&gt;</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.

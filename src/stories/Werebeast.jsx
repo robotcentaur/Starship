@@ -4,29 +4,16 @@ import Container from '../components/Container'
 import Portrait from '../components/Portrait'
 import ImageList from '../components/ImageList'
 import Stats from '../components/Stats'
+import CharacterIntro from '../components/CharacterIntro'
 
-var imageList = ['mutant_claw.png', ]
 var MutationPrime = "Claws"
+const getImage = (imageName) => { return `'<img src="https://coffeelux.club/uploads/${imageName}" width="180px" height="180px"/>')`}
 const Werebeast = ReactDOMServer.renderToString(
-  <Container>
+  <CharacterIntro>
     (set: $MutationPrime to "Claws")
     (set: $Damage to $Damage+3)
-    (set: $Portrait to '<img src="https://coffeelux.club/uploads/mutant_claw.png" width="180px" height="180px"/>')
-    <Stats>
-      <p>
-        (print: "ATHLETICS=") (print: $Athletics)
-        (print: "BRAINS=") (print: $Brains)
-        (print: "CHARM=") (print: $Charm)
-        (print: "DURABILITY=") (print: $Durability)
-      </p>
-    </Stats>
-    <Portrait >
-      $Portrait
-    </Portrait >
-    <footer class="footer">
-      You have {MutationPrime}! (link-goto: "Continue", "Jyadon")
-    </footer>
-  </Container>
+    (set: $Portrait to {getImage('mutant_claw.png')}
+  </CharacterIntro>
 )
 
 export default {

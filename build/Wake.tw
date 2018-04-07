@@ -1,2 +1,24 @@
 :: Wake
-<div class="wrapper" data-reactroot=""><article class="main"><p>(print: "ATHLETICS=") (print: $Athletics) (print: "BRAINS=") (print: $Brains) (print: "CHARM=") (print: $Charm) (print: "DURABILITY=") (print: $Durability)</p></article><aside class="aside aside-1"><div><div><img src="https://coffeelux.club/uploads/mutant_tent.png" width="25%"/>--&gt; (link-goto: "<!-- -->Cephlapod<!-- -->")</div><div><img src="https://coffeelux.club/uploads/mutant_claw.png" width="25%"/>--&gt; (link-goto: "<!-- -->Werebeast<!-- -->")</div><div><img src="https://coffeelux.club/uploads/mutant_turtle.png" width="25%"/>--&gt; (link-goto: "<!-- -->Turtle<!-- -->")</div><div><img src="https://coffeelux.club/uploads/crusatcean.png" width="25%"/>--&gt; (link-goto: "<!-- -->Crustacean<!-- -->")</div></div></aside><footer class="footer">Welcome Traveller! You awake in your birth creche already a young adult -- android servitors are forcing you outside, but you gaze at the mirrored surface of the chrome chambers and see a humanoid....</footer></div>
+<div class="wrapper" data-reactroot="">
+  <article class="main">
+    <p>ATHLETICS= (print: $Athletics)
+      <br/>BRAINS= (print: $Brains)
+      <br/>CHARM= (print: $Charm)
+      <br/>DURABILITY= (print: $Durability)
+      <br/>
+    </p>
+  </article>
+  <aside class="aside aside-1">
+    <div>
+      <div>
+        <img src="https://coffeelux.club/uploads/mutant_tent.png" width="12%" />--> (link-goto: "Cephalopod")</div>
+      <div>
+        <img src="https://coffeelux.club/uploads/mutant_claw.png" width="12%" />--> (link-goto: "Werebeast")</div>
+      <div>
+        <img src="https://coffeelux.club/uploads/mutant_turtle.png" width="12%" />--> (link-goto: "Turtle")</div>
+      <div>
+        <img src="https://coffeelux.club/uploads/crustacean.png" width="12%" />--> (link-goto: "Crustacean")</div>
+    </div>
+  </aside>
+  <footer class="footer">Welcome Traveller! You awake in your birth creche already a young adult -- android servitors are forcing you outside, but you gaze at the mirrored surface of the chrome chambers and see a humanoid....(link-goto: "Continue", "Jyadon")</footer>
+</div>
